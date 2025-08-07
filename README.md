@@ -123,7 +123,8 @@ FutFacts is an app that provides the user with real-time data on players, teams,
     * => Login screen 
 
 ## Wireframes
-![image](https://hackmd.io/_uploads/S1exRFz_ge.png)
+<img width="2157" height="1668" alt="image" src="https://github.com/user-attachments/assets/ac2286df-5d73-4d01-953e-eadc48c42055" />
+
 
 
 ### Networking
