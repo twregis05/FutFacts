@@ -139,6 +139,7 @@ FutFacts is an app that provides the user with real-time data on players, teams,
 - [x] User can use app in light and dark mode
 - [x] App navigation generally set up
 - [x] Home, Login, Sign up, Following, and Account page initial set up
+- [x] Created app logo
 
 **What needs to be done (hopefully by next week)**
 - [ ] Integrate Football API to get soccer stats
