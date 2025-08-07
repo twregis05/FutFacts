@@ -134,3 +134,14 @@ FutFacts is an app that provides the user with real-time data on players, teams,
     - Ticketmaster API
     - YouTube API
     - OpenAI API
+
+
+## Video Demo
+<div>
+    <a href="https://www.loom.com/share/918cc26d35314196a9f20f6748653549">
+      <p>FutFacts - Initial Video Demo - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/918cc26d35314196a9f20f6748653549">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/918cc26d35314196a9f20f6748653549-8f34acb6ce9221f7-full-play.gif">
+    </a>
+  </div>
