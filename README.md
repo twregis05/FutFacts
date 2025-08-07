@@ -62,7 +62,7 @@ FutFacts is an app that provides the user with real-time data on players, teams,
 * User can compare players/teams with each other
 * User can view data visualizations of players
 * User can view and interact with league tables
-* User can use app in both light mode and dark mode
+- [x] User can use app in both light mode and dark mode
 
 ### 2. Screen Archetypes
 
@@ -134,6 +134,18 @@ FutFacts is an app that provides the user with real-time data on players, teams,
     - Ticketmaster API
     - YouTube API
     - OpenAI API
+
+## What's been done so far:
+- [x] User can use app in light and dark mode
+- [x] App navigation generally set up
+- [x] Home, Login, Sign up, Following, and Account page initial set up
+
+**What needs to be done (hopefully by next week)**
+- [ ] Integrate Football API to get soccer stats
+- [ ] Add more pages to display these stats
+- [ ] Set up login/sign up logic
+    - [ ] Set up MongoDB integration with Swift
+- [ ] Implement account screen to adjust user preferences 
 
 
 ## Video Demo
