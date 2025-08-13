@@ -23,7 +23,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         usernameField.delegate = self
         pwField.delegate = self
         configureKeyboardDismiss()
-        
     }
     
     func configureKeyboardDismiss()
@@ -38,6 +37,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         view.addGestureRecognizer(swipeDown)
     }
     
+    // dismisses keyboard from screen
     @objc func dismissKeyboard()
     {
         view.endEditing(true)
@@ -52,9 +52,41 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func login(_ sender: UIButton)
     {
-        performSegue(withIdentifier: "loginSegue", sender: self)
+        let keyText = usernameField.text ?? ""
+        let pwText = pwField.text ?? ""
+        
+        if keyText.isEmpty || pwText.isEmpty
+        {
+            showErrorMessage(with: "Please fill in all fields.")
+            return
+        }
+        
+        AuthManager.login(key: keyText, password: pwText)
+        {
+            result in
+            
+            switch result
+            {
+                case .success:
+                    self.performSegue(withIdentifier: "loginSegue", sender: self)
+                case .failure(let error):
+                    print(error)
+                    self.showErrorMessage(with: error.localizedDescription)
+            }
+        }
+        
+        
     }
     
+    func showErrorMessage(with message: String)
+    {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .default) { _ in
+            alert.dismiss(animated: true)
+        })
+        present(alert, animated: true)
+    }
+
 
 }
 

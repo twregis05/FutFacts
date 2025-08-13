@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC0ACD342E47375D0038C4C6 /* FirebaseAI in Frameworks */ = {isa = PBXBuildFile; productRef = AC0ACD332E47375D0038C4C6 /* FirebaseAI */; };
+		AC0ACD362E47375D0038C4C6 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = AC0ACD352E47375D0038C4C6 /* FirebaseDatabase */; };
+		AC0ACD382E47B9C50038C4C6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AC0ACD372E47B9C50038C4C6 /* FirebaseFirestore */; };
+		AC0ACD3A2E47B9C50038C4C6 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = AC0ACD392E47B9C50038C4C6 /* FirebaseFirestoreCombine-Community */; };
+		AC9151792E46BD3C00082157 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AC9151782E46BD3C00082157 /* FirebaseAuth */; };
 		ACA572AE2E43C80300F7283B /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = ACA572AD2E43C80300F7283B /* DGCharts */; };
 		ACA572B12E43C81400F7283B /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = ACA572B02E43C81400F7283B /* TinyConstraints */; };
 		ACA572B42E43DF9E00F7283B /* BCrypt in Frameworks */ = {isa = PBXBuildFile; productRef = ACA572B32E43DF9E00F7283B /* BCrypt */; };
@@ -42,9 +47,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC0ACD362E47375D0038C4C6 /* FirebaseDatabase in Frameworks */,
+				AC0ACD3A2E47B9C50038C4C6 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				AC0ACD342E47375D0038C4C6 /* FirebaseAI in Frameworks */,
 				ACA572B42E43DF9E00F7283B /* BCrypt in Frameworks */,
+				AC9151792E46BD3C00082157 /* FirebaseAuth in Frameworks */,
 				ACA572AE2E43C80300F7283B /* DGCharts in Frameworks */,
 				ACA572B12E43C81400F7283B /* TinyConstraints in Frameworks */,
+				AC0ACD382E47B9C50038C4C6 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +128,7 @@
 				ACA572AC2E43C80300F7283B /* XCRemoteSwiftPackageReference "Charts" */,
 				ACA572AF2E43C81400F7283B /* XCRemoteSwiftPackageReference "TinyConstraints" */,
 				ACA572B22E43DF9E00F7283B /* XCRemoteSwiftPackageReference "bcrypt" */,
+				AC9151772E46BD3C00082157 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AC13A9A52E431CE40040338B /* Products */;
@@ -349,6 +360,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AC9151772E46BD3C00082157 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.1.0;
+			};
+		};
 		ACA572AC2E43C80300F7283B /* XCRemoteSwiftPackageReference "Charts" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ChartsOrg/Charts";
@@ -376,6 +395,31 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AC0ACD332E47375D0038C4C6 /* FirebaseAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC9151772E46BD3C00082157 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAI;
+		};
+		AC0ACD352E47375D0038C4C6 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC9151772E46BD3C00082157 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		AC0ACD372E47B9C50038C4C6 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC9151772E46BD3C00082157 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		AC0ACD392E47B9C50038C4C6 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC9151772E46BD3C00082157 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		AC9151782E46BD3C00082157 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC9151772E46BD3C00082157 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
 		ACA572AD2E43C80300F7283B /* DGCharts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ACA572AC2E43C80300F7283B /* XCRemoteSwiftPackageReference "Charts" */;

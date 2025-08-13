@@ -13,17 +13,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Home"
-        
-        navigationController?.navigationBar.barTintColor = UIColor(named: "backgroundColor")
-        
-        let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = UIColor(named: "backgroundColor")!
-        appearance.titleTextAttributes = [.foregroundColor: UIColor(.white)]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "AccentColor")!]
-        navigationItem.standardAppearance = appearance
-        navigationItem.scrollEdgeAppearance = appearance
+        VCUtils.makeNavbarBold(for: self)
         
         
     }
