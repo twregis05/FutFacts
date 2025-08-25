@@ -16,6 +16,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
+    var loadingView: UIView?
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -61,6 +63,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
+        showLoadingScreen()
         AuthManager.login(key: keyText, password: pwText)
         {
             result in
@@ -68,14 +71,37 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             switch result
             {
                 case .success:
+                    self.hideLoadingScreen()
                     self.performSegue(withIdentifier: "loginSegue", sender: self)
                 case .failure(let error):
+                    self.hideLoadingScreen()
                     print(error)
                     self.showErrorMessage(with: error.localizedDescription)
             }
         }
         
         
+    }
+    
+    func showLoadingScreen()
+    {
+        let loadingView = UIView(frame: view.bounds)
+        loadingView.backgroundColor = UIColor(named: "backgroundColor")
+        loadingView.alpha = 0.7
+        
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.center = loadingView.center
+        activityIndicator.startAnimating()
+        loadingView.addSubview(activityIndicator)
+        view.addSubview(loadingView)
+        
+        self.loadingView = loadingView
+    }
+    
+    func hideLoadingScreen()
+    {
+        self.loadingView?.removeFromSuperview()
+        self.loadingView = nil
     }
     
     func showErrorMessage(with message: String)

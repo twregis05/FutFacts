@@ -19,6 +19,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var confirmPwTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     
+    var loadingView: UIView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -102,15 +104,18 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         else
         {
+            showLoadingScreen()
             AuthManager.signUp(firstName: firstNameTextField.text!, lastName: lastNameTextField.text!, username: userTextField.text!, email: emailTextField.text!, password: pwTextField.text!)
             {
                 result in
                 switch result
                 {
                     case .success:
+                        self.hideLoadingScreen()
                         self.successfulPopup()
                     case .failure(let error):
                         print(error)
+                        self.hideLoadingScreen()
                         self.showErrorMessage(with: error.localizedDescription)
                     
                 }
@@ -119,6 +124,27 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         
         
         
+    }
+    
+    func showLoadingScreen()
+    {
+        let loadingView = UIView(frame: view.bounds)
+        loadingView.backgroundColor = UIColor(named: "backgroundColor")
+        loadingView.alpha = 0.7
+        
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.center = loadingView.center
+        activityIndicator.startAnimating()
+        loadingView.addSubview(activityIndicator)
+        view.addSubview(loadingView)
+        
+        self.loadingView = loadingView
+    }
+    
+    func hideLoadingScreen()
+    {
+        self.loadingView?.removeFromSuperview()
+        self.loadingView = nil
     }
     
     func showErrorMessage(with message: String)

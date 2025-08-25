@@ -11,6 +11,8 @@
 		AC0ACD362E47375D0038C4C6 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = AC0ACD352E47375D0038C4C6 /* FirebaseDatabase */; };
 		AC0ACD382E47B9C50038C4C6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AC0ACD372E47B9C50038C4C6 /* FirebaseFirestore */; };
 		AC0ACD3A2E47B9C50038C4C6 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = AC0ACD392E47B9C50038C4C6 /* FirebaseFirestoreCombine-Community */; };
+		AC20E4052E5655A600412679 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = AC20E4042E5655A600412679 /* Nuke */; };
+		AC20E4072E5655A600412679 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = AC20E4062E5655A600412679 /* NukeExtensions */; };
 		AC9151792E46BD3C00082157 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AC9151782E46BD3C00082157 /* FirebaseAuth */; };
 		ACA572AE2E43C80300F7283B /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = ACA572AD2E43C80300F7283B /* DGCharts */; };
 		ACA572B12E43C81400F7283B /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = ACA572B02E43C81400F7283B /* TinyConstraints */; };
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC20E4052E5655A600412679 /* Nuke in Frameworks */,
 				AC0ACD362E47375D0038C4C6 /* FirebaseDatabase in Frameworks */,
 				AC0ACD3A2E47B9C50038C4C6 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				AC0ACD342E47375D0038C4C6 /* FirebaseAI in Frameworks */,
@@ -55,6 +58,7 @@
 				ACA572AE2E43C80300F7283B /* DGCharts in Frameworks */,
 				ACA572B12E43C81400F7283B /* TinyConstraints in Frameworks */,
 				AC0ACD382E47B9C50038C4C6 /* FirebaseFirestore in Frameworks */,
+				AC20E4072E5655A600412679 /* NukeExtensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +133,7 @@
 				ACA572AF2E43C81400F7283B /* XCRemoteSwiftPackageReference "TinyConstraints" */,
 				ACA572B22E43DF9E00F7283B /* XCRemoteSwiftPackageReference "bcrypt" */,
 				AC9151772E46BD3C00082157 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				AC20E4032E5655A600412679 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AC13A9A52E431CE40040338B /* Products */;
@@ -360,6 +365,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AC20E4032E5655A600412679 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.8.0;
+			};
+		};
 		AC9151772E46BD3C00082157 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -414,6 +427,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AC9151772E46BD3C00082157 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseFirestoreCombine-Community";
+		};
+		AC20E4042E5655A600412679 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC20E4032E5655A600412679 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		AC20E4062E5655A600412679 /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC20E4032E5655A600412679 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
 		};
 		AC9151782E46BD3C00082157 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;

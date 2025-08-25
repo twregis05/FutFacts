@@ -16,9 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         FirebaseConfiguration.shared.setLoggerLevel(.debug)
         FirebaseApp.configure()
+        Task
+        {
+            let client = TeamsClient.shared
+            await client.configureLists()
+        }
         return true
+       
     }
 
     // MARK: UISceneSession Lifecycle
