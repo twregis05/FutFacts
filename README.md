@@ -129,6 +129,7 @@ FutFacts is an app that provides the user with real-time data on players, teams,
 ### Networking
 
 - Football API
+- Firebase
 - Strech:
     - Ticketmaster API
     - YouTube API
@@ -137,23 +138,9 @@ FutFacts is an app that provides the user with real-time data on players, teams,
 ## What's been done so far:
 - [x] User can use app in light and dark mode
 - [x] App navigation generally set up
-- [x] Home, Login, Sign up, Following, and Account page initial set up
-- [x] Created app logo
+- [x] Home, Login, Sign up, Search screens set up and implemented
+- [x] Created app logo 
 
 **What needs to be done (hopefully by next week)**
-- [ ] Integrate Football API to get soccer stats
-- [ ] Add more pages to display these stats
-- [ ] Set up login/sign up logic
-    - [ ] Set up MongoDB integration with Swift
+- [ ] Add more pages to display stats
 - [ ] Implement account screen to adjust user preferences 
-
-
-## Video Demo
-<div>
-    <a href="https://www.loom.com/share/918cc26d35314196a9f20f6748653549">
-      <p>FutFacts - Initial Video Demo - Watch Video</p>
-    </a>
-    <a href="https://www.loom.com/share/918cc26d35314196a9f20f6748653549">
-      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/918cc26d35314196a9f20f6748653549-8f34acb6ce9221f7-full-play.gif">
-    </a>
-  </div>
